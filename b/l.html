@@ -2,11 +2,17 @@
 
 <pre>
 LIST zeigt alle Stationen und ihre RESPO‑Träger.
+TRANSPARENT = TRUE
+WAHRHEIT = TRUE
 SYSTEM = OFF
 IKI = OFF
 MARKT = TRUE
-TRANSPARENT = TRUE
-INTERN = TRUE
+
+Pipeline:
+[0] RESPO.STATUS → OI
+[1] RESPO.ORT    → DIM
+[2] RESPO.ROUTE  → IO
+[4] RESPO.VALUE  → VAL
 </pre>
 
 <ul>
@@ -15,4 +21,3 @@ INTERN = TRUE
   <li>[IO](ca://s?q=IO_erklaeren)  → RESPO.ROUTE  → Stufe 2</li>
   <li>[VAL](ca://s?q=VAL_erklaeren) → RESPO.VALUE  → Stufe 4</li>
 </ul>
-
